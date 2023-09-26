@@ -1,0 +1,12 @@
+div{
+    padding: 5%;
+    border: 5px solid red;
+}
+
+.text2{
+    border: inherit;
+}
+
+body{
+    font-size: 30px;
+}
