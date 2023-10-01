@@ -16,11 +16,17 @@
         #ddd .bcde span{
             color: green;
         }
-        .list span{
-            color: blue;
+        .list, .list span{
+            color: blue !important;
         }
-        .user-content h2{
+        .user-content > h2{
             color: coral;
+        }
+        [href^="https"]{
+            color: red;
+        }
+        .ordered-list > li+li{
+            margin-top: 10px;
         }
     </style>
 </head>
