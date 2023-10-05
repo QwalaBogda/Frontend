@@ -11,9 +11,10 @@
     
         img {
             display: block;
+            vertical-align: middle;
             max-width: 100%;
             height: auto;
-            object-fit: none;
+            object-fit: contain;
         }
     
         .container{
@@ -24,9 +25,15 @@
         }
     
         .rows{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
+        }
+
+        .rows_cell{
+            width: calc((100% - 20px) /3);
+            box-sizing: border-box;
+
         }
     
         .item{
@@ -46,30 +53,30 @@
         }
         .item__mark{
             width: 100%;
+            box-sizing: border-box;
             padding: 25px;
-            border-radius: 9999px;
+            border-radius: 90px;
             background-color: blueviolet;
-            padding-left: 0;
-            padding-right: 0;
+        
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="rows">
-            <div class="item">
+            <div class="item rows_cell">
                 <img class="item__thumb" src="https://placekitten.com/200/500" alt="">
                 <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
                 <div class="item__mark"></div>
             </div>
     
-            <div class="item">
+            <div class="item rows_cell">
                 <img class="item__thumb" src="https://placekitten.com/200/500" alt="">
                 <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
                 <div class="item__mark"></div>
             </div>
     
-            <div class="item">
+            <div class="item rows_cell">
                 <img class="item__thumb" src="https://placekitten.com/200/500" alt="">
                 <p class="item__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat beatae ipsam! Ipsum soluta odit sint enim, provident asperiores. Qui recusandae mollitia officiis nobis, provident quo illo corporis ipsam nisi.</p>
                 <div class="item__mark"></div>
