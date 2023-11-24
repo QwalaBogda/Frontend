@@ -115,6 +115,14 @@
             font-size: 13px;
             color: black;
         }
+        .item:hover .item__footer{
+            background-color: red;
+            color: wheat;
+        }
+        .item:hover .item__bg{
+            background-color: red;
+            color: wheat;
+        }
     </style>
 
 
@@ -137,8 +145,11 @@
     <style>
         .arrow{
             display: inline-flex;
+            transition: transform 150ms ease-in;
         }
-        .arrow:hover{
+        .arrow:hover {
+            transform: rotate(180deg);
+            color: red;
         }
     </style>
     <div class="container">
@@ -151,13 +162,21 @@
     <h2 class="heading">Задача 3. Облако</h2>
 
     <style>
-        .cloud {
-            /* animation: ..... */
-        }
+    .cloud {
+        animation: floatCloud 3s infinite; 
+    }
 
-        /* @keyframes названиеАнимации {
-
-        } */
+        @keyframes floatCloud {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px); 
+            }
+            100% {
+                transform: translateY(0);
+            }
+}
     </style>
 
     <div class="container">
@@ -192,14 +211,20 @@
 
         .stacked-card__card--1{
             background-color: red;
+            transform: rotate(5deg);
+            z-index: 3;
         }
 
         .stacked-card__card--2{
             background-color: blue;
+            transform: rotate(10deg);
+            z-index: 1;
         }
 
         .stacked-card__card--3{
             background-color: yellow;
+            transform: rotate(15deg);
+            z-index: 2;
         }
 
     </style>
