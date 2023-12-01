@@ -30,3 +30,37 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav__link:hover {
+    color: navy;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+}
+
+.nav__img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.nav__img--home {
+    width: 25px;
+    height: 20px;
+    margin: 0;
+}
