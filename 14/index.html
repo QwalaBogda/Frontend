@@ -18,9 +18,22 @@
             gap: 32px;
         }
         .grid__item{
-            background-color: cadetblue;
+            background-color: rgb(234, 123, 11);
             font-size: 18px;
             padding: 50px;
+        }
+        .grid__item--1 {
+            order: 12;
+        }
+        .grid__item--12 {
+            order: -1;
+        }
+        .grid__item--9 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }.grid__item--5 {
+            grid-column-start: 2;
+            grid-column-end: 4;
         }
     </style>
 </head>
