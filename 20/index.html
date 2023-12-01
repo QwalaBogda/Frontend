@@ -12,13 +12,16 @@
         ol,
         ul,
         body {
-        margin: 0;
+            margin: 0;
         }
-        *, ::after, ::before {
+
+        *,
+        ::after,
+        ::before {
             box-sizing: border-box;
         }
 
-        :root{
+        :root {
             --primary-color: black;
             --secondary-color: white;
             --tertiary-color: #FFEB3B;
@@ -30,17 +33,26 @@
             --tertiary-color: #FF5722;
         }
 
-        body{
-            font-family: sans-serif;
+        [data-theme="dark"] .item2__date {
+            background-color: #FF5722;
+            color: var(--primary-color);
         }
 
-        .container{
+        body {
+            font-family: sans-serif;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .container {
             max-width: 980px;
             width: 100%;
             margin: 0 auto;
             padding: 20px 0;
         }
-        .header{
+
+        .header {
             background-color: var(--primary-color);
             color: var(--secondary-color);
             font-size: 32px;
@@ -49,45 +61,45 @@
             padding: 20px 0;
         }
 
-        .items2{
+        .items2 {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 10px;
         }
-        .item2{
-            border: 1px solid black;
+
+        .item2 {
+            border: 1px solid var(--secondary-color);
             display: flex;
             flex-direction: column;
+            transition: border-color 0.5s;
         }
-        .item2__name{
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        .item2__content{
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        .item2__footer{
-            background-color: black;
-            color: white;
-            padding: 5px;
-            text-align: center;
-        }
-        .item2__bg{
-            background-color: black;
+
+        .item2__bg {
+            background-color: var(--primary-color);
             height: 150px;
+            transition: background-color 0.5s;
         }
-        .item2__body{
+
+        .item2__body {
             padding: 10px;
         }
-        .item2__date{
-            background-color: #FFEB3B;
+
+        .item2__footer {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px;
+            text-align: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .item2__date {
+            background-color: var(--tertiary-color);
             padding: 3px;
             display: inline-block;
             font-size: 13px;
-            color: black;
+            color: var(--primary-color);
+            transition: background-color 0.5s, color 0.5s;
         }
-
     </style>
 </head>
 <body>
