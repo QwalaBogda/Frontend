@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Товары</a></li>
-            <li>
+    <div class="menu">
+        <ul class="menu__list">
+            <li class="menu__item"><a href="#">Главная</a></li>
+            <li class="menu__item"><a href="#">Новости</a></li>
+            <li class="menu__item"><a href="#">Товары</a></li>
+            <li class="menu__item menu__item--dropdown">
                 <a href="#">Категории</a>
-                <ul>
-                    <li>Категория 1</li>
-                    <li>Категория 2</li>
-                    <li>Категория 3</li>
-                    <li>Категория 4</li>
+                <ul class="menu__dropdown-list">
+                    <li class="menu__dropdown-item">Категория 1</li>
+                    <li class="menu__dropdown-item">Категория 2</li>
+                    <li class="menu__dropdown-item">Категория 3</li>
+                    <li class="menu__dropdown-item">Категория 4</li>
                 </ul>
             </li>
-            <li><a href="#">Контакты</a></li>
+            <li class="menu__item"><a href="#">Контакты</a></li>
         </ul>
-    </div>
+     </div>
+     
 </body>
 </html>
