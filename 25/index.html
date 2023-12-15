@@ -7,6 +7,10 @@
     <style>
         body{
             font-size: 18px;
+
+        }
+        :root{
+            --greenn: green;
         }
         .container{
             max-width: 900px;
@@ -26,7 +30,18 @@
             color: white;
         }
         .text-color-primary{
-            color: green;
+            color: var(--greenn);
+        }
+
+        .box--1 {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .box--2 {
+            background-image: url('https://w.forfun.com/fetch/41/41017c94e44d4bf46a20986fbf2df06b.jpeg');
+            background-size: contain;
+            background-position: center;
+            opacity: 0.7; /* непрозрачность элемента  0.7 */
         }
 
 
@@ -50,10 +65,10 @@
         </div>
     </div>
 
-    <div class="page__level box box--3">
-        <p class="text-color-primary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos itaque obcaecati fugiat voluptatum sapiente eveniet earum minus neque, amet et ipsa eos beatae ducimus nemo cum magnam voluptatem. Delectus, ipsum!</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-        <ul class="text-color-primary">
+    <div class="page__level box box--3 text-color-primary">
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos itaque obcaecati fugiat voluptatum sapiente eveniet earum minus neque, amet et ipsa eos beatae ducimus nemo cum magnam voluptatem. Delectus, ipsum!</p>                                                                             <!-- Current Color зелёный цвет иконки -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <ul >
             <li>List 1</li>
             <li>List 1</li>
         </ul>
