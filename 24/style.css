@@ -1,11 +1,5 @@
-h1,
-h2,
-h3,
-p,
-ol,
-ul,
-body {
-margin: 0;
+h1, h2, h3, p, ol, ul, body {
+    margin: 0;
 }
 
 img {
@@ -16,7 +10,8 @@ img {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: sans-serif;
 }
 
@@ -29,14 +24,14 @@ body{
     padding-right: 8px;
 }
 
-/*ширина экрана >= 576px*/
+/* Ширина экрана >= 576px */
 @media (min-width: 576px) {
     .container {
         max-width: 576px;
     }
 }
 
-/*ширина экрана >= 768px*/
+/* Ширина экрана >= 768px */
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
@@ -44,57 +39,54 @@ body{
         padding-right: 16px;
     }
 }
-/*ширина экрана >= 1024px*/
+
+/* Ширина экрана >= 1024px */
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
     }
 }
-/*ширина экрана >= 1292px*/
+
+/* Ширина экрана >= 1292px */
 @media (min-width: 1292px) {
     .container {
         max-width: 1292px;
     }
 }
 
-.color{
-    background-color: red;
-}
-.page{}
-.page__cell{
-    margin-bottom: 30px;
-}
 
-.example-text{
-    background-color: yellow;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-/*ширина экрана >= 1024px*/
-@media (min-width: 1024px) {
-    .example-text {
-        padding: 16px;
-        font-size: 24px;
-        font-weight: 400;
-    }
-}
-
-/*ширина экрана >= 1292px*/
-@media (min-width: 1292px) {
-    .example-text {
-        font-size: 32px;
-    }
-}
-
-.gallery{
+.gallery {
     display: grid;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
-    padding: 0 100px;
+    padding: 0 16px; 
 }
-.gallery__item{
+
+.gallery__item {
     height: 200px;
     background-color: beige;
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media (max-width: 575px) {
+    .gallery {
+        padding: 0 8px;
+    }
+
+    .gallery__item {
+        height: 150px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .gallery__item {
+        height: 180px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .gallery__item {
+        height: 250px;
+    }
 }

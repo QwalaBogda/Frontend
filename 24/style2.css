@@ -1,11 +1,5 @@
-h1,
-h2,
-h3,
-p,
-ol,
-ul,
-body {
-margin: 0;
+h1, h2, h3, p, ol, ul, body {
+    margin: 0;
 }
 
 img {
@@ -16,7 +10,8 @@ img {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: sans-serif;
 }
 
@@ -29,55 +24,68 @@ body{
     margin-left: auto;
 }
 
+/* ширина экрана >= 576px */
+@media (min-width: 576px) {
+    .container {
+        max-width: 576px;
+    }
+}
 
-/*ширина экрана <= 1292px*/
-@media (max-width: 1291px) {
+/* ширина экрана >= 768px */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* ширина экрана >= 1024px */
+@media (min-width: 1024px) {
     .container {
         max-width: 1024px;
     }
 }
-/*ширина экрана <= 1024px*/
-@media (max-width: 1023px) {
+
+/* ширина экрана >= 1292px */
+@media (min-width: 1292px) {
     .container {
-        max-width: 768px;
+        max-width: 1292px;
     }
 }
-/*ширина экрана <= 768px*/
-@media (max-width: 767px) {
-    .container {
-        max-width: 576px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-}
-/*ширина экрана <= 576px*/
-@media (max-width: 575px) {
 
-}
-
-.color{
+.color {
     background-color: red;
 }
-.page{}
-.page__cell{
+.page {}
+.page__cell {
     margin-bottom: 30px;
 }
 
-.example-text{
+.example-text {
     background-color: yellow;
     font-size: 32px;
     font-weight: 400;
     padding: 16px;
 }
 
-/*ширина экрана <= 1292px*/
-@media (max-width: 1291px) {
+/* ширина экрана >= 1292px */
+@media (min-width: 1292px) {
     .example-text {
+        font-size: 32px;
+    }
+}
+
+/* ширина экрана >= 1024px */
+@media (min-width: 1024px) {
+    .example-text {
+        padding: 16px;
         font-size: 24px;
     }
 }
-/*ширина экрана <= 1024px*/
-@media (max-width: 1023px) {
+
+/* ширина экрана >= 768px */
+@media (min-width: 768px) {
     .example-text {
         padding: 12px;
         font-size: 14px;
@@ -85,14 +93,46 @@ body{
     }
 }
 
-
-.gallery{
+.gallery {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
     gap: 20px;
     padding: 0 100px;
 }
-.gallery__item{
+
+.gallery__item {
     height: 200px;
     background-color: beige;
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media (max-width: 575px) {
+    .gallery {
+        padding: 0 8px;
+    }
+
+    .gallery__item {
+        height: 150px;
+    }
+}
+
+/* Дополнительные стили для планшетов */
+@media (min-width: 576px) and (max-width: 767px) {
+    .gallery__item {
+        height: 180px;
+    }
+}
+
+/* Дополнительные стили для экранов >= 1024px */
+@media (min-width: 1024px) {
+    .gallery__item {
+        height: 250px;
+    }
+}
+
+/* Дополнительные стили для экранов >= 1292px */
+@media (min-width: 1292px) {
+    .gallery__item {
+        height: 300px;
+    }
 }
